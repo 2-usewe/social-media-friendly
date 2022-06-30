@@ -1,0 +1,61 @@
+<%- include ("includes/header") %>
+<style>
+    .row-down{
+        margin-top: 10%;
+        text-align: center;
+    }
+</style>
+<section class="premium-section">
+	<div class="gap gray-bg">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="row" id="page-contents">
+
+						<div class="col-md-3">
+							<%- include ("includes/left-sidebar") %>
+						</div>
+
+						<div class="col-md-6">
+
+							<div class="central-meta">
+								<div class="editing-interest">
+									<h5 class="f-title"><i class="ti-user"></i>About me</h5>
+									
+								</div>
+                                    <div class="row-down">
+                                    <!-- <img src="<%=frnd.profileImage%>" style="width: 222px; height: 222px; object-fit: cover; border-radius: 250px;"> -->
+                                    <!-- <img src="' +mainURL+'/'+<%=frnd.profileImage%>+'"> -->
+                                    <img class="profile-image" id="profile-image" style="width: 222px; height: 222px; object-fit: cover; border-radius: 250px;"/>
+                                    </div>
+                                    <div class="row-down">
+                                        Full Name: <%=frnd.name%>
+                                    </div>
+                                    <div class="row-down">
+                                        Gender: <%=frnd.gender%>
+                                    </div>
+                                        
+                                    <div class="row-down">DOB:<%=frnd.dob%></div>
+                                    <div class="row-down"> 
+                                        City: <%=frnd.city%>
+                                    </div>
+                                    <div class="row-down">
+                                        Country:<%=frnd.country%>
+                                    </div>
+                                    <div class="row-down">
+                                        About me: <%=frnd.aboutMe%>
+                                    </div>
+                                </div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<script>
+    document.querySelector(".profile-image").setAttribute("src", mainURL + "/<%=frnd.profileImage%>");
+</script>
+<%- include ("includes/footer") %>
